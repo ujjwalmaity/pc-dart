@@ -48,10 +48,10 @@ class CBCBlockCipher extends BaseBlockCipher {
 
   @override
   void init(bool forEncryption, covariant ParametersWithIV params) {
-    if (params.iv.length != blockSize) {
-      throw ArgumentError(
-          'Initialization vector must be the same length as block size');
-    }
+    // if (params.iv.length != blockSize) {
+    //   throw ArgumentError(
+    //       'Initialization vector must be the same length as block size');
+    // }
 
     _encrypting = forEncryption;
     _iv.setAll(0, params.iv);
